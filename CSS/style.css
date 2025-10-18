@@ -5,6 +5,8 @@ body {
   background-color: black;
 }
 header {
+  position: sticky;
+  top: 0;
 }
 .navbar {
   align-items: center;
@@ -22,19 +24,25 @@ header {
   font-size: 2.5vh;
 }
 .item a {
+  display: inline-block;
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+.item a:hover {
+  transform: scale(1.2);
 }
 .container {
   position: relative;
   margin-top: 10vh;
+  margin-bottom: 10vh;
   align-items: center;
   justify-content: center;
   display: flex;
 }
 
 .container-item img {
-  width: 80vh;
-  height: 80vh;
+  width: 40vw;
+  height: 40vw;
   object-fit: cover;
   border-radius: 50%;
 
@@ -45,17 +53,43 @@ header {
   transform: scale(1.05);
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
 }
+.container-item-three {
+  position: relative;
+  right: -5vw;
+}
+.container-item-three div {
+  display: inline-block;
+  position: absolute;
 
+  width: 35vh;
+  height: 30vh;
+}
+.container-item-three em {
+  display: inline-block;
+  animation: bounce 1s ease infinite alternate;
+}
+.bounce-text span:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
 .decorate-item-main {
   position: absolute;
-  left: 30vh;
+  left: 15vw;
   display: flex;
   flex-direction: column;
   align-self: center;
 }
 .container-item * {
   font-size: 2.5vh;
-  margin-top: 2vh;
+  gap: 2vw;
 }
 .decorate-item-one {
   width: 0.1vh;
@@ -66,4 +100,23 @@ header {
 .decorate-time-five {
   writing-mode: vertical-rl;
   text-orientation: upright;
+}
+
+.circle {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  border: 0.1vw solid white;
+  border-radius: 50%;
+  z-index: 0;
+  left: 50vw;
+  top: 10vw;
+}
+.decorate-item a {
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+.decorate-item a:hover {
+  transform: scale(2);
+  text-shadow: 0 0 25px rgba(255, 0, 0, 1.5);
 }
