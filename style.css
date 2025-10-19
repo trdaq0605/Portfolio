@@ -1,21 +1,24 @@
 * {
   color: white;
+  box-sizing: border-box;
 }
+
 body {
+  position: relative;
   background-color: black;
 }
 header {
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 .navbar {
   align-items: center;
   display: flex;
   justify-content: space-around;
   height: 12vh;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+
+  background-color: black;
 }
 #logo {
   font-size: 4.5vh;
@@ -33,16 +36,16 @@ header {
 }
 .container {
   position: relative;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 5%;
+  margin-bottom: 3%;
   align-items: center;
   justify-content: center;
   display: flex;
 }
 
 .container-item img {
-  width: 40vw;
-  height: 40vw;
+  width: 80vh;
+  height: 80vh;
   object-fit: cover;
   border-radius: 50%;
 
@@ -54,14 +57,14 @@ header {
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
 }
 .container-item-three {
-  position: relative;
-  right: -5vw;
+  position: absolute;
+  right: 25vw;
 }
 .container-item-three div {
   display: inline-block;
   position: absolute;
 
-  width: 35vh;
+  width: 30vh;
   height: 30vh;
 }
 .container-item-three em {
@@ -86,6 +89,7 @@ header {
   display: flex;
   flex-direction: column;
   align-self: center;
+  z-index: 100;
 }
 .container-item * {
   font-size: 2.5vh;
@@ -104,13 +108,13 @@ header {
 
 .circle {
   position: absolute;
-  width: 20vw;
-  height: 20vw;
+  width: 40vh;
+  height: 40vh;
   border: 0.1vw solid white;
   border-radius: 50%;
-  z-index: 0;
+  z-index: -1;
   left: 50vw;
-  top: 10vw;
+  top: -1vw;
 }
 .decorate-item a {
   display: inline-block;
@@ -119,4 +123,92 @@ header {
 .decorate-item a:hover {
   transform: scale(2);
   text-shadow: 0 0 25px rgba(255, 0, 0, 1.5);
+}
+
+#myname {
+  text-transform: uppercase;
+  font-size: 5vw;
+  text-align: center;
+  margin-bottom: 5%;
+}
+#major {
+  font-size: 1vw;
+  font-style: italic;
+}
+
+.biography {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 200px);
+  gap: 8px;
+  background-color: white;
+}
+
+.biography-one {
+  grid-column: span 5 / span 5;
+  text-align: center;
+  font-size: 5vw;
+  align-self: center;
+}
+.biography-one h2 {
+  font-weight: bold;
+  color: black;
+  transition: all 0.5s ease;
+}
+
+.biography-one h2:hover {
+  transform: scale(1.1);
+}
+.biography-two {
+  grid-row: span 2 / span 2;
+  grid-row-start: 2;
+}
+.biography-two-child * {
+  color: black;
+  font-size: 2.3vh;
+  line-height: 25px;
+  list-style: disc;
+  margin-left: 10%;
+}
+.mainskills {
+  margin-top: 50%;
+}
+.biography-two-child li {
+  margin-left: 8%;
+}
+.biography-two-child h4 {
+  font-weight: bold;
+  color: red;
+  margin-bottom: 5%;
+}
+.biography-three {
+  grid-column: span 4 / span 4;
+  grid-row-start: 2;
+  font-size: 2.5vh;
+  margin-right: 2%;
+}
+.biography-three * {
+  color: black;
+  margin-left: 13vw;
+}
+
+.biography-four {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.biography-five {
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+
+.bi-image img {
+  border-radius: 100px 100px 100px 100px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
+  transition: all 0.4s ease;
+  margin-left: 100%;
+}
+.bi-image img:hover {
+  transform: scale(1.08) translateY(-8px);
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.8);
 }
