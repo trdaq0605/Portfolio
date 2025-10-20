@@ -6,6 +6,12 @@
 body {
   position: relative;
   background-color: black;
+  overflow-x: hidden;
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 header {
   position: sticky;
@@ -137,6 +143,8 @@ header {
 }
 
 .biography {
+  position: relative;
+  overflow: hidden;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 200px);
@@ -186,6 +194,7 @@ header {
   grid-row-start: 2;
   font-size: 2.5vh;
   margin-right: 2%;
+  margin-top: -2%;
 }
 .biography-three * {
   color: black;
@@ -195,11 +204,13 @@ header {
 .biography-four {
   grid-column-start: 2;
   grid-row-start: 3;
+  z-index: 500;
 }
 
 .biography-five {
   grid-column-start: 3;
   grid-row-start: 3;
+  z-index: 500;
 }
 
 .bi-image img {
@@ -211,4 +222,106 @@ header {
 .bi-image img:hover {
   transform: scale(1.08) translateY(-8px);
   box-shadow: 0 0 35px rgba(255, 0, 0, 0.8);
+}
+.duong-thang-1 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 20vw;
+  height: 40vh;
+  top: 85%;
+  left: 7%;
+}
+.duong-thang-2 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 5vw;
+  height: 10vh;
+  top: 80%;
+  left: 25%;
+}
+.duong-thang-3 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 20vw;
+  height: 40vh;
+  top: -15%;
+  left: 90%;
+}
+.duong-thang-4 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 50vw;
+  height: 100vh;
+  top: 12%;
+  left: -25%;
+}
+.icon-camera i {
+  position: absolute;
+  color: pink;
+  border-radius: 50%;
+  width: 5vw;
+  height: 10vh;
+  font-size: 3vw;
+  top: 38%;
+  left: 35%;
+  transform: rotate(-45deg);
+}
+.duong-thang-5 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 20vw;
+  height: 40vh;
+  top: 75%;
+  left: 75%;
+  overflow: hidden;
+}
+.duong-thang-6 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 20vw;
+  height: 40vh;
+  top: 75%;
+  left: 75%;
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  margin: 4%;
+}
+.skills-tilte {
+  font-weight: bold;
+  text-align: center;
+  font-size: 5vw;
+  align-self: center;
+}
+.skills-item {
+  justify-content: center;
+  font-size: 10vh;
+  margin: 5% 0;
+}
+.skills-item i {
+  display: inline-block;
+}
+.thuoc {
+  display: inline-block;
+  border: 1px solid white;
+  width: 80%;
+  padding: 1%;
+  margin-bottom: 0.5%;
+}
+.do {
+  background-color: orange;
+  width: 85%;
+  padding: 1%;
+}
+.do-css {
+  background-color: dodgerblue;
+  width: 65%;
+  padding: 1%;
 }
